@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Simon</title>
+	<link rel="stylesheet" href="/css/simon.css">
+
+</head>
+<body>
+	<button type="button" id="btn1">Click Me</button>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type ="text/javascript"></script>
+
+	<div id = "container">
+		<div id="squareBlue" value="1"></div>
+		<div id="squareRed" value="2"></div>
+		<div id="squareGreen" value="3"></div>
+		<div id="squareYellow" value="4"></div>
+	</div>
+<script>
+
+		var sequence = [];
+		var savedsequence = [];
+		(function sequenceone() {
+			savedsequence.push($("#squareBlue").attr("value"));
+			
+			savedsequence.push($("#squareRed").attr("value"));
+			
+			savedsequence.push($("#squareGreen").attr("value"));
+			
+			savedsequence.push($("#squareYellow").attr("value"));
+			console.log(savedsequence);
+		})();
+
+		//Button fade on click
+		
+		
+		var random = Math.floor((Math.random()*3));
+		console.log(random)
+		circleArray = savedsequence[random]
+		console.log(circleArray)
+			
+			$("#btn1").click(function() {
+				
+					
+			
+						if(circleArray == "1"){
+            				$("#squareBlue").animate({
+                				opacity: "0"
+            				}, 500).animate({
+            					opacity: "1"
+            				}, 1000)
+            			} else if (circleArray == "2"){
+            				$("#squareRed").animate({
+                			opacity: "0"
+            				}, 500).animate({
+            					opacity: "1"
+            				}, 1000)
+            			} else if (circleArray == "3"){
+            				$("#squareYellow").animate({
+                				opacity: "0"
+            				}, 500).animate({
+            					opacity: "1"
+            				}, 1000)
+            			} else if (circleArray == "4"){
+            				$("#squareGreen").animate({
+                				opacity: "0"
+            				}, 500).animate({
+            					opacity: "1"
+            				}, 1000)
+            			};
+            		
+            	});
+            	
+        	
+            	
+            	console.log()
+			
+          
+       
+
+        
+
+
+
+       	
+	
+
+		
+
+
+
+
+		//Add score saving mechanic to the screen based on home many times correct buttons are pressed
+		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		//Add tracking for buttons to know when and how many to press
+		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		//Reshape all four boards and make it so the buttons can each be pressed and it registers when done in the correct order, else it makes you start over.
+		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		//Have the boards each loop through making each square 'light up'.
+		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		//Set each button to record a press
+		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		//Give each button data values so that they register as a point, or something similar.
+		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		//Add the function of random colors dimming when button is pressed, up to 5 numbers. Each time I finish the loop, add a random new iteration.
+		//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		//TODO: START HERE
+
+
+			//<div id = "container2">
+		//<div id="squareBlue2"></div>
+		//<div id="squareRed2"></div>
+		//<div id="squareGreen2"></div>
+		//<div id="squareYellow2"></div>
+	//</div>
+	//<div id = "container3">
+		//<div id="squareBlue3"></div>
+		//<div id="squareRed3"></div>
+		//<div id="squareGreen3"></div>
+		//<div id="squareYellow3"></div>
+	//</div>
+	//<div id = "container4">
+		//<div id="squareBlue4"></div>
+		//<div id="squareRed4"></div>
+		//<div id="squareGreen4"></div>
+		//<div id="squareYellow4"></div>
+	//</div>
+		</script>
+	</body>
+</html>
