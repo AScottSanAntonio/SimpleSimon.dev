@@ -1,3 +1,14 @@
+#mainpage {
+  height: 20px;
+  width: 100px;
+  background-color: grey;
+  opacity: .5;
+  margin: 5px;
+  border: 2px solid white;
+  padding: 5px;
+
+}
+
 body {
   background-image: url("img/backgroundknight.jpg");
   color: #fff;
@@ -100,7 +111,10 @@ li {
 }
 
 .start {
-  width: 100%;
+  width: 100px;
   height: 30px;
   text-align: center;
+  top: 12em;
+  left: 24em;
+  position: absolute;
 }
